@@ -1,6 +1,8 @@
 Examples demonstrating how to use Gradle to build Flex applications.
 
-The HelloWorld directory shows a simple 'Hello world' Flex 4 application that builds with Gradle (currently Gradle 1.0 Milestone 3).
+The HelloWorld directory shows a simple 'Hello World' Flex 4 application that builds with Gradle (currently Gradle 1.0 Milestone 3).
+
+This project uses a Git submodule to include the Gradle Flex plugin as a buildSrc directory (have a look at Gradle's documentation on writing plugins for more info).
 
 * Pre-requisites *
 
