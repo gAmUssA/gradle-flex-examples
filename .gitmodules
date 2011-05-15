@@ -1,0 +1,3 @@
+[submodule "HelloWorld/buildSrc"]
+	path = HelloWorld/buildSrc
+	url = https://stevendick@github.com/stevendick/gradle-flex.git
