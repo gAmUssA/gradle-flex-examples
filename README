@@ -1,3 +1,12 @@
 Examples demonstrating how to use Gradle to build Flex applications.
 
 The HelloWorld directory shows a simple 'Hello world' Flex 4 application that builds with Gradle (currently Gradle 1.0 Milestone 3).
+
+* Pre-requisites *
+
+You need to create a FLEX_HOME environment variable pointing at the root directory of a Flex 4.1 SDK.
+
+* Caveats *
+
+I've only tested this on the Windows platform and this is very much a work-in-progress.
+
