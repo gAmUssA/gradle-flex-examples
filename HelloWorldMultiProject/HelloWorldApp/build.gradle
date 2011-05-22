@@ -1,0 +1,11 @@
+apply plugin: FlexPlugin
+
+// we have a compile and runtime dependency on the HelloWorldLib project
+
+dependencies {
+
+	// Flex offers 3 ways of refering to the dependency: external, merge and RSL
+	// here we are using RSL - see the Flex documentation to understand what these mean
+
+	rsl project(':HelloWorldFlexLib', 'libraries')
+}

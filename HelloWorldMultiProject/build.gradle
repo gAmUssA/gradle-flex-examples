@@ -1,0 +1,12 @@
+// the top-level build isn't oomplete until all the child projects are complete
+dependsOnChildren()
+
+// all the subprojects are Flex projects, so we should applu the Flex plugin
+subProjects {
+	apply plugin: FlexPlugin
+}
+
+// let's generate an HTML page for the main application
+project(':HelloWorldMainApp') {
+	// TODO
+}

@@ -1,0 +1,20 @@
+This example demonstrates some additional features of Gradle and the Flex plugin:
+
+Multi-Project Build (standard Gradle feature)
+
+We have a Flex application and Flex library project.  Both need to be compiled and the Flex application depends on the library project.
+
+Gradle natively supports multi-project builds using the settings.gradle file to control which projects to build.  See Gradle's documentation on multi-project builds for how to layout your projects.  Reading the Gradle documentation you may be under the impression that only tree-like directory structures are supported for multi-project builds.  This is not the case as Gradle supports the includeFlat instead of include directive in the settings.gradle when your project directories are all at the same directory-level (as is typical when you use Flash Builder for development).
+
+HTML Entry Page (Flex plugin feature)
+
+We generate an HTML page for the application.
+
+How to Build
+
+To build this Flex application with Gradle, open a command prompt in this directory and type:
+
+gradle -i build
+
+Gradle will compile the Flex projects and publish the results to the build directory.
+
