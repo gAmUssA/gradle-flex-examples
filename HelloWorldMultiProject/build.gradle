@@ -1,12 +1,35 @@
 // the top-level build isn't oomplete until all the child projects are complete
 dependsOnChildren()
 
-// all the subprojects are Flex projects, so we should applu the Flex plugin
-subProjects {
+// all the sub-projects are Flex projects, so we should apply the Flex plugin to all of them
+subprojects {
 	apply plugin: FlexPlugin
 }
 
-// let's generate an HTML page for the main application
-project(':HelloWorldMainApp') {
-	// TODO
+// let's generate an HTML page for the main application by adding another step to the main application's compileFlex task
+project(':HelloWorldApp') {
+	compileFlex << {
+		ant.'html-wrapper'(
+			title:               'Hello World',
+			file:                'helloworld.html',
+			height:              '100%',
+			width:               '100%',
+			application:         'HelloWorldApp',
+			swf:                 'HelloWorldApp',
+			history:             'true',
+			'express-install':   'true',
+			'version-detection': 'true',
+			output:              buildDir
+		)
+    }
 }
+
+// top-level build task that depends on the underlying tasks
+
+task build
+
+//build.dependsOn {
+//    subprojects.findAll{it.file('.actionScriptProperties').exists()}.collect{
+//        it.path + ':build'
+//    }
+//}

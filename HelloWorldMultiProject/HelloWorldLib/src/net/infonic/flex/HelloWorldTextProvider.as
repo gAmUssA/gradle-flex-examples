@@ -1,8 +1,8 @@
 package net.infonic.flex {
 
-	pubic class HelloWorldTextProvider {
+	public class HelloWorldTextProvider {
 	
-		public static function getText():String {
+		public function getText():String {
 			return "Hello World in Flex 4"
 		}
 	}
